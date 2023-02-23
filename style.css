@@ -1,15 +1,28 @@
+/*Importação da fonte*/
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+
+
+ :root{
+    --azulDnc: #0c70f2;
+    --pretoDnc: #303030;
+    --cinzaHover: #c9c9c9;
+
+    --fontePadrao: 'Inter';
+ }
 
 body {
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 
+/*Menu de navegação principal*/
 #header{
     width: 100%;
     height: 105px;
     border: 1px solid black;
-    background: #303030;
+    background-color: var(--pretoDnc);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,8 +32,8 @@ body {
         margin-right: 5%;
         width: 80px;
         height: 39px;
-        background: #0C70F2;
-        font-family: 'Inter';
+        background: var(--azulDnc);
+        font-family: var(--fontePadrao);
         font-style: normal;
         font-size: 15px;
         line-height: 24px;
@@ -38,14 +51,118 @@ body {
 
     #menu a{
         text-decoration: none;
-        font-family: 'Inter', sans-serif;
+        font-family: var(--fontePadrao);
         font-style: normal;
         font-size: 20px;
         color: #FFFFFF;
     }
 
     #menu a:hover{
-    color: #CCCCCC;
+    color: var(--cinzaHover);
     }
 
+/*Seção principal do site*/
 
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+header{
+    color: #FFFFFF;
+    font-family: var(--fontePadrao);
+}
+
+header h1{
+    font-size: 80px;
+    line-height: 97px;
+    font-weight: 800px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+header h2{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 190px;
+}
+
+header .markup{
+    background-color: #000000;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/*Formulário*/
+
+form{
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: left;
+    font-family: var(--fontePadrao);
+    width: 600px;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form input{
+    height: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    font-family: var(--fontePadrao);
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    padding: 10px;
+}
+
+form label{
+    margin: 10px 0px;
+}
+
+form input::placeholder{
+    color: rgba(57, 57, 57, 0.5);
+}
+
+#checkboxItens label{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+#checkboxItens{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.7);
+}
+
+input[type="submit"]{
+    margin-top: 85px;
+    height: 56px;
+    width: 100%;
+    background: rgba(12, 112, 242, 0.9);
+    box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+    border-radius: 10px;
+    border: 0;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
